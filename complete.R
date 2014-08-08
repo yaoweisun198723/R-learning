@@ -7,10 +7,7 @@ complete <- function(directory, id = 1:332) {
         cnt[j] <- sum(!apply(is.na(file), 1, any))
         j <- j + 1
     }
-    
-    
     result <- cbind.data.frame(id = id, nobs = cnt)
-    print(result)
 }
 zeropad <- function(number, len) {
     x <- number
