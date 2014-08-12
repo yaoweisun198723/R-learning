@@ -6,7 +6,7 @@ rankhospital <- function(state, outcome, rank = "best") {
     title <- names(file)
     idxes <- 1:length(title)
     if (!any(state == file$State)) stop("invalid state")
-    switch(outcome,
+    switch(outcome, 
            "heart attack"=oc_type<-idxes[title=="Hospital.30.Day.Death..Mortality..Rates.from.Heart.Attack"],
            "heart failure"=oc_type<-idxes[title=="Hospital.30.Day.Death..Mortality..Rates.from.Heart.Failure"],
            "pneumonia"=oc_type<-idxes[title=="Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia"],
